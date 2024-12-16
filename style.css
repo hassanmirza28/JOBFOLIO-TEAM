@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    position: relative;
+}
+
+/* Global CSS (will use most of the time in our project*/
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 60px;
+}
+h3{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+
+#w-btn{
+    margin-left: 40px;
+    background: white;
+    color: black;
+    padding: 9px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+
+}
+
+.sec-space{
+    padding: 4rem 0;
+}
+.extra-space{
+    padding-top: 8rem;
+}
+.obj-width{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar */
+
+header{
+    background-color: darkcyan;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+#navbar .logo{
+    width: 120px;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+#menu li a{
+    color: black;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+ 
+#bar{
+    color: white;
+    display: none;
+}
+
+@media (max-width: 699px){
+    #menu {
+        background-color: white;
+        display: block;
+        width: 280px;
+        height: auto;
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        padding: 30px 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0,2); 
+        border-radius: 13px;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    #menu.active{
+        right: 10px;
+        opacity: 1;
+    }
+
+    #menu li{
+        padding: 1rem;
+    }
+
+    #menu li a {
+        color: #1f4a40;
+    }
+
+    #bar {
+        display: block;
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+
+    #w-btn {
+        margin: 20px 0 0 50px;
+        background: darkcyan;
+        color: white;
+        
+    }
+}
